@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: #ebe9e1;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* utility */
+.bg-white {
+    background: #ebe9e1;
+}
+
+.bg-blue {
+    background: #002e4d;
+}
+
+
+/* navbar */
+header {
+    background: #002e4d;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeSlideUp 1s forwards ease;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #ebe9e1;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+    /* Adjust margin for the first item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #ebe9e1;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #687176;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-toggle .menu-icon,
+.menu-toggle .close-icon {
+    font-size: 1.4em;
+    color: #ebe9e1;
+
+}
+
+.menu-toggle .close-icon {
+    display: none;
+}
+
+.menu-toggle.open .menu-icon {
+    display: none;
+}
+
+.menu-toggle.open .close-icon {
+    display: block;
+}
+
+
+/* about */
+
+.top-padding {
+    padding-top: 5rem;
+}
+
+.container2 {
+    text-align: center;
+    width: 70vw;
+    margin: auto;
+    padding: 2rem 1rem;
+    padding-top: 2rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeSlideUp 1s forwards ease;
+}
+
+.container2 h1 {
+    font-size: 3rem;
+    padding-top: 1rem;
+    color: #002e4d;
+}
+
+.container2 h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #353f45;
+}
+
+.container2 p {
+    padding: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.parts {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 1rem;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+.parts h3 {
+    font-weight: 600;
+    color: #353f45;
+}
+
+/* portfolio section */
+.container3 {
+    text-align: center;
+    width: 70vw;
+    margin: auto;
+    padding: 2rem 1rem;
+    padding-top: 4rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeSlideUp 1s forwards ease;
+    padding-bottom: 3rem;
+}
+
+.container3 h1 {
+    font-size: 3rem;
+    padding-top: 1rem;
+    color: #ebe9e1;
+}
+
+.container3 h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ffc20f;
+    margin-bottom: 2rem;
+}
+
+.container3 .video-categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.container3 .video-categories a {
+    width: 30%;
+}
+
+.container3 .video-categories a img {
+    width: 80%;
+    border: 1px solid #ebe9e1;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.container3 .video-categories a img:hover {
+    transform: scale(1.1);
+}
+
+/* lets work together */
+.container2 .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    margin: 3rem auto;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.container2 .contact-links a {
+    width: 10%;
+}
+
+.container2 .contact-links a img {
+    width: 100%;
+    /* border: 1px solid white; */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.container2 .contact-links a img:hover {
+    transform: scale(1.1);
+}
+
+.container2 .information {
+    display: flex;
+    flex-wrap: wrap;
+    color: #002e4d;
+    justify-content: space-evenly;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+/* join */
+.container4 {
+    text-align: center;
+    width: 70vw;
+    margin: auto;
+    padding: 2rem 1rem;
+    padding-top: 5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeSlideUp 1s forwards ease;
+}
+
+.container4 h1 {
+    font-size: 3rem;
+    padding-top: 1rem;
+    color: #ebe9e1;
+}
+
+.container4 h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ffc20f;
+}
+
+.container4 .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.container4 .contact-links a {
+    width: 7%;
+}
+
+.container4 .contact-links a img {
+    width: 100%;
+    /* border: 1px solid white; */
+    transition: transform 0.3s ease;
+    filter: invert(100%);
+}
+
+.container4 .contact-links a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #002e4d;
+    font-size: 1.1rem;
+    background-color: #ebe9e1;
+}
+
+/* horizontal videos */
+.videos img {
+    width: 80%;
+    margin: 2rem auto;
+    border-radius: 15px;
+}
+
+.short-videos img {
+    width: 40%;
+    margin: 2rem;
+    border-radius: 15px;
+}
+
+/* for tablet devices */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    header {
+        padding: 1em 2em;
+    }
+
+    .top-padding {
+        padding-top: 4rem;
+    }
+
+    .container2 {
+        width: 70vw;
+    }
+
+    .parts h3 {
+        margin: 0 1rem;
+    }
+
+    /* portfolio section */
+    .container3 {
+        text-align: center;
+        width: 90vw;
+    }
+
+    /* lets work together */
+    .container2 .contact-links {
+        width: 70vw;
+    }
+
+    .container4 {
+        width: 90vw;
+    }
+}
+
+
+
+
+/* for smartphones */
+@media (max-width: 600px) {
+
+    /* navbar */
+    .container {
+        padding: 0 2rem;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .logo {
+        font-size: 1.4em;
+    }
+
+    nav {
+        position: fixed;
+        right: -100%;
+        /* Hide initially off-screen */
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: #002e4d;
+        color: #ebe9e1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        transition: right 0.5s ease, opacity 0.5s ease;
+    }
+
+    nav ul {
+        background-color: #002e4d;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        /* margin-top: 20rem; */
+        width: 100%;
+    }
+
+    nav.open {
+        right: 0;
+        opacity: 1;
+    }
+
+    nav.open ul {
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 2rem;
+        top: 0;
+    }
+
+    /* about */
+    .container2 {
+        width: 90vw;
+        padding: 2rem;
+        padding-top: 4rem;
+    }
+
+    .top-padding {
+        padding-top: 1rem;
+    }
+
+    .container2 h1 {
+        font-size: 2rem;
+    }
+
+    .container2 p {
+        font-size: 1.1rem;
+    }
+
+    .parts {
+        width: 95%;
+        padding-bottom: 1rem;
+    }
+
+    /* portfolio section */
+    .container3 {
+        text-align: center;
+        width: 90vw;
+        padding: 2rem 0;
+        padding-top: 4rem;
+    }
+
+    .container3 h1 {
+        font-size: 2rem;
+    }
+
+    .container3 .video-categories {
+        margin: 2rem auto;
+    }
+
+    .container3 .video-categories a {
+        width: 50%;
+    }
+
+    .container3 .video-categories a img {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    /* lets work together */
+    .container2 .contact-links {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .container2 .contact-links a {
+        width: 15%;
+    }
+
+    .container4 {
+        width: 90vw;
+        padding: 1rem 0;
+    }
+
+    /* join */
+    .container4 h1 {
+        font-size: 2rem;
+    }
+
+    .container4 .contact-links {
+        margin: 2rem auto;
+    }
+
+    .container4 .contact-links a {
+        width: 10%;
+    }
+
+    .container4 .contact-links a img {
+        width: 100%;
+    }
+
+    /* footer */
+    footer {
+        padding: 1rem;
+    }
+
+    /* horizontal videos */
+    .videos {
+        margin-top: 0;
+    }
+
+    .videos img {
+        margin: 1rem auto;
+    }
+
+    .short-videos img {
+        width: 80%;
+        margin: 1rem;
+    }
+
+
+    /* Add these styles to ensure smooth dropdown animation */
+    header {
+        flex-direction: row;
+    }
+
+    nav {
+        width: 100%;
+        background-color: #002e4d;
+        color: #ebe9e1;
+        overflow: hidden;
+        max-height: 0;
+        /* Initially hide the menu */
+        transition: max-height 0.5s ease-out;
+    }
+
+    nav.open {
+        max-height: 100vh;
+        /* Expand the menu */
+        width: 100vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        width: 100%;
+    }
+
+    nav.open ul {
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 2rem;
+    }
+}

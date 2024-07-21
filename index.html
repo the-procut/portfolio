@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the.procut</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/theprocut.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">The Pro Cut.</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span class="menu-icon">☰</span>
+                <span class="close-icon">✖</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="top-padding"></div>
+
+    <!-- about -->
+    <section id="about">
+        <div class="bg-white">
+            <div class="container2">
+                <h1>Who I Am ?</h1>
+                <h5>A little bit information about me.</h5>
+                <p>My name is Gursharan & I am a freelance video editor with more than a
+                    year of experience speciallizing in YouTube content.
+                    Transforming raw footage into engaging videos, they bring creativity and expertise to make your
+                    content
+                    shine.</p>
+                <div class="parts">
+                    <h3>1 <sup>+</sup> <br>Year Experience</h3>
+                    <h3>70 <sup>+</sup> <br>Completed Projects</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio -->
+    <div class="bg-blue">
+        <section id="portfolio">
+            <div class="container3">
+                <h1>Previous Projects</h1>
+                <h5>Portfolio</h5>
+                <div class="video-categories">
+                    <a href="categories/documentary.html"><img
+                            src="assets/images/video-categories/Documentary Short Films.png" alt=""></a>
+                    <a href="categories/youtube.html"><img src="assets/images/video-categories/Youtube Videos.png" alt=""></a>
+                    <!-- <a href="categories/shorts-reels.html"><img src="assets/images/video-categories/shortsreels.png" alt=""></a> -->
+                    <a href="categories/trailer.html"><img src="assets/images/video-categories/Trailer.png" alt=""></a>
+                    <a href="categories/commercials.html"><img src="assets/images/video-categories/Commercials.png" alt=""></a>
+                    <!-- <a href="categories/music.html"><img src="assets/images/video-categories/Music Videos.png" alt=""></a> -->
+                    <a href="categories/sound-design.html"><img src="assets/images/video-categories/Sound Design.png" alt=""></a>
+                    <a href="categories/color-grading.html"><img src="assets/images/video-categories/Color grading.png" alt=""></a>
+                    <!-- <a href="categories/others.html"><img src="assets/images/video-categories/more.png" alt=""></a> -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- lets work -->
+    <section id="contact">
+        <div class="bg-white">
+            <div class="container2">
+                <h1>Let's Work Together</h1>
+                <h5>To Create a Masterpiece.</h5>
+                <div class="contact-links">
+                    <a href="https://wa.me/8146600626" target="_blank"><img src="assets/images/logos/whatsapp.png" alt=""></a>
+                    <a href="mailto:gursharan.dodhara@gmail.com" target="_blank"><img src="assets/images/logos/gmail.png" alt=""></a>
+                    <a href="https://www.instagram.com/the.procut?igsh=dnh1YmVuY2g4and0" target="_blank"><img src="assets/images/logos/instagram.png" alt=""></a>
+                </div>
+                <div class="information">
+                    <p>Location :<br>
+                        Jalandhar, Punjab , India.
+                    </p>
+                    <p>Mobile :<br>
+                        +91 814-660-0626
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-blue">
+            <div class="container4">
+                <h1>Join Us</h1>
+                <h5>Our Social Media.</h5>
+                <div class="contact-links">
+                    <a href="https://www.youtube.com/@the.procut/videos" target="_blank"><img src="assets/images/logos/youtube(1).png" alt=""></a>
+                    <a href="https://www.instagram.com/the.procut?igsh=dnh1YmVuY2g4and0" target="_blank"><img src="assets/images/logos/instagram(2).png" alt=""></a>
+                    <a href="https://x.com/the_procut?t=lupeqW4NVXDC4hyF517KMA&s=08" target="_blank"><img src="assets/images/logos/twitter (2).png" alt=""></a>
+                    <a href="https://www.facebook.com/the.procut.01?mibextid=ZbWKwL" target="_blank"><img src="assets/images/logos/facebook.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/gursharan-7344a7260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="assets/images/logos/linkedin.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p> All rights reserved. <br>&copy; 2024 TheProCut.</p>
+        <!-- <a href="terms.html">Terms & Conditions.</a> -->
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav ul li a');
+    
+            menuToggle.addEventListener('click', function () {
+                nav.classList.toggle('open');
+                menuToggle.classList.toggle('open');
+            });
+    
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth <= 600) { // Check if the screen width is 600px or less
+                        nav.classList.remove('open');
+                        menuToggle.classList.remove('open');
+                    }
+                });
+            });
+        });
+    
+        // section smooth scroll
+        document.querySelectorAll('a[href^="#contact"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+    
+
+</body>
+
+</html>

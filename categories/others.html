@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the.procut</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../assets/images/theprocut.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">The Pro Cut.</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html"> Back to Home</a></li>
+                    <!-- <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="../index.html">Portfolio</a></li>
+                    <li><a href="../index.html">Contact</a></li> -->
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span class="menu-icon">☰</span>
+                <span class="close-icon">✖</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- portfolio -->
+    
+    <div class="bg-blue">
+        <section id="portfolio">
+            <div class="container3">
+                <h1>More Videos</h1>
+                <h5>Previous Projects</h5>
+                <div class="videos">
+                    <img src="../assets/images/thumbnails/others/6c1384b6-4e92-4d29-a5ee-e61deb5a0a8b_fz2a0md_2k.jpeg" alt="">
+                    <img src="../assets/images/thumbnails/others/6c1384b6-4e92-4d29-a5ee-e61deb5a0a8b_fz2a0md_2k.jpeg" alt="">
+                    <img src="../assets/images/thumbnails/others/6c1384b6-4e92-4d29-a5ee-e61deb5a0a8b_fz2a0md_2k.jpeg" alt="">
+                    <img src="../assets/images/thumbnails/others/6c1384b6-4e92-4d29-a5ee-e61deb5a0a8b_fz2a0md_2k.jpeg" alt="">
+                </div>
+                <div class="short-videos">
+                    <img src="../assets/images/thumbnails/shorts/dylann-hendricks-A1Y6xVH4XyA-unsplash.jpg" alt="">
+                    <img src="../assets/images/thumbnails/shorts/dylann-hendricks-A1Y6xVH4XyA-unsplash.jpg" alt="">
+                    <img src="../assets/images/thumbnails/shorts/dylann-hendricks-A1Y6xVH4XyA-unsplash.jpg" alt="">
+                    <img src="../assets/images/thumbnails/shorts/dylann-hendricks-A1Y6xVH4XyA-unsplash.jpg" alt="">
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p> All rights reserved. <br>&copy; 2024 TheProCut.</p>
+        <!-- <a href="terms.html">Terms & Conditions.</a> -->
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+
+            menuToggle.addEventListener('click', function () {
+                nav.classList.toggle('open');
+                menuToggle.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
